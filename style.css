@@ -1,0 +1,95 @@
+*{
+    background-color: cyan;
+}
+
+h1 {
+
+    color: mediumblue;
+    background-color: mintcream;
+    border-radius: 15%;
+    text-align: center;
+}
+
+h1:hover {
+    background-color: rgb(8, 6, 6);
+    transition-delay: 1s;
+    transition-duration: 2s ;
+    color: gold;
+}
+
+.ball{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(245, 65, 176);
+    /* border-radius: 50%; */
+    /* transition-duration: 2s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.97, 0.35, 1, 1); */
+    transition: all 4s linear ; 
+    /*here rather than writing those 4 lines of trasition properties we can write this one line of code */
+
+    box-shadow: orchid;
+
+}
+
+.ball:hover {
+    /* transform: translateY(400%); */
+    background-color: rgba(9, 24, 224, 0.507);
+    border-radius: 50%;
+    animation:  magic 2s linear forwards;/* by using this forwards tht element stays there it self*/
+}
+
+button {
+       border:red;
+      cursor: pointer;
+} 
+
+
+.button__primary {
+    background-image: linear-gradient( to right ,#ff512f 0%,  #dd2476 51%, #ff512f 100% );
+} 
+
+
+.button__primary {
+    margin: 10px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-style: oblique;
+    transition: all 2s linear;
+    font-weight: 500;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 4px;
+    display: block;
+  }
+
+
+  .button__primary:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+@keyframes magic {
+     25% {
+         transform: translate(20%,100%); 
+     }
+
+     35% {
+         transform: translate( 0%,150%);
+     }
+
+    50% {
+        transform: translate(70%, 250%);
+    }
+
+    75%{
+        transform: translate(250%,0%);
+    }
+    100%{
+        transform: translate(150%, 300%);
+    }
+}
